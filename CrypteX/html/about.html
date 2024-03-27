@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Profile Card</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+  }
+
+  .bg-indigo-400, .before\:bg-cover {
+    background-image: url('../images/gh.jpg'); /* Replace 'your-image.jpg' with your image URL */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 0;
+  }
+
+  .before\:bg-cover:before {
+    content: "";
+    background-color: honeydew; /* Replace 'your-image.jpg' with your image URL */
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: row; /* Arrange cards horizontally */
+    justify-content: center;
+    gap: 20px; /* Adjust spacing between cards */
+    padding: 20px;
+    margin-top: 100px ;
+  }
+
+  .card {
+    background: rgb(218, 186, 226);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px; /* Adjust maximum width of cards */
+    height: 300px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-top: -60px;
+    object-fit: cover;
+  }
+
+  .card h2 {
+    font-family: 'League Spartan', sans-serif;
+    margin: 10px 0 5px;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .card p {
+    font-family: 'League Spartan', sans-serif;
+    color: #666;
+    font-size: 16px;
+  }
+
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .social-icons li {
+    width: 40px;
+    height: 40px;
+    background-color: #5a67d8;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-icons li a {
+    color: white;
+    font-size: 24px;
+    display: inline-block;
+  }
+
+  .community-text {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'League Spartan', sans-serif;
+    font-size: 80px;
+    color: rgb(80, 55, 94);
+    font-weight: bold;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 200px; 
+  }
+
+  /* Go back button */
+  .go-back-btn {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(80, 55, 94);
+    color: #d6cdde;
+    border: 2px solid #090111;
+    padding: 20px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 9999;
+    font-size: 15px;
+  }
+</style>
+</head>
+<body class="bg-indigo-400 before:bg-cover">
+  <button class="go-back-btn" onclick="window.location.href = '../index.html'">Go Back</button>
+  <div class="community-text">Our Community  </div>
+  <br>
+  <div class="cards-container">
+    <!-- Your card elements here -->
+    <div class="card">
+      <img src="../images/aishu.jpeg" alt="Profile picture">
+      <h2>Aish</h2>
+      <p>Web Developer</p>
+      <ul class="social-icons">
+        <li><a href="#"><span class="material-symbols-outlined">face</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">alternate_email</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">phone</span></a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <img src="../images/harini.jpg" alt="Profile picture">
+      <h2>Harini</h2>
+      <p>Web Developer</p>
+      <ul class="social-icons">
+        <li><a href="#"><span class="material-symbols-outlined">face</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">alternate_email</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">phone</span></a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <img src="../images/dharsh.jpeg" alt="Profile picture">
+      <h2>Hams</h2>
+      <p>Customer</p>
+      <ul class="social-icons">
+        <li><a href="#"><span class="material-symbols-outlined">face</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">alternate_email</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">phone</span></a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <img src="../images/hams.jpeg" alt="Profile picture">
+      <h2>Dharsh</h2>
+      <p>Customer</p>
+      <ul class="social-icons">
+        <li><a href="#"><span class="material-symbols-outlined">face</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">alternate_email</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">phone</span></a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
